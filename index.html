@@ -1,69 +1,49 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfólio</title>
     <!--Estilo CSS-->
-    <link rel="stylesheet" href="indexStyle.css">
+    <link rel="stylesheet" href="style/style.css">
     <link rel="shortcut icon" href="imagens/logoSemfundo.png" type="image/x-icon">
     <!--JavaScript-->
     <script src="script.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Miriam+Libre:wght@400;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&family=Miriam+Libre:wght@400;700&display=swap');
+    </style>
 </head>
-<!--Espaçamento-->
 
 <body>
-    <!--TELA DE CARREGAMENTO-->
-    <div id="loader" class="dots-container">
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-      </div>
-
-
-    <div class="content">
-    <header class="nav">
-        <img class="nav__img" src="imagens/logoHeader.png" alt="Logo">
-        <nav>
-            <a class="nav__source" href="https://atom.bio/fernandoribeiro" target="_blank">Contato</a>
-            <a class="nav__source" href="projetos.html" target="_parent">Projetos</a>
-            <a class="nav__source" href="#rodape">Sobre Mim</a>
-        </nav>
-    </header>
-    <main>
-        <img class="imgPerfil" src="imagens/fotoPerfil.png" alt="">
-        <div class="textoPerfil">
-            <p class="comentarioPerfil">Olá, me chamo <strong>Fernando Ribeiro</strong></p>
-            <p class="comentarioPerfil">Sou Técnico em Informática</p>
-            <p class="comentarioPerfil_2">Por favor, dê uma olhada nos meus projetos, sonhos e conquistas.</p>
+    <nav>
+        <div class="nav-container">
+            <img src="img/perfil/iconPerfil_40px.png" alt="Icone Perfil">
+            <div id="bolinha"></div>
+            <ul>
+                <li><a href="">Projetos</a></li>
+                <li><a href="">Conhecimento</a></li>
+            </ul>
         </div>
-        <div class="skills">
-            <div id="hardware" class="barraSkill">
-                <h2>Hardware</h2>
-                <p class="descricoesSkill">Desenvolvimento de hardware com Arduino e microcontroladores.Desenvolvimento
-                    de hardware com Arduino e microcontroladores.Desenvolvimento de hardware com Arduino e
-                    microcontroladores.</p>
+    </nav>
+    <main>
+        <div id="welcome">
+            <h1>Hello, People!</h1>
+            <p>Seja muito Bem-Vindo(a) ao meu Portfólio</p>
+            <div class="button-welcome">
+                <button id="contato-welcome">CONTATO</button>
+                <button id="mais-welcome">MAIS...</button>
             </div>
-            <div id="programacao" class="barraSkill">
-                <h2>Programação</h2>
-                <p class="descricoesSkill">Desenvolvimento de sistemasDesenvolvimento de sistemasDesenvolvimento de
-                    sistemasDesenvolvimento de sistemas</p>
-            </div>
-            <div id="redes" class="barraSkill">
-                <h2>Redes</h2>
-                <p class="descricoesSkill">Redes e cabeamento com microcontroladoresRedes e cabeamento com
-                    microcontroladoresRedes e cabeamento com microcontroladores</p>
+        </div>
+        <div id="plataformas">
+            <h2>Acesso para multiplataformas</h2>
+            <div class="plataformas-container">
+                <img class="plataformas" src="img/plataformas_310px.png" alt="Multiplataformas">
+                <div class="sombra-plataforma"></div>
             </div>
         </div>
     </main>
-    <footer id="rodape">
-        <div class="sobreMim">
-            <h2></h2>
-            <p></p>
-        </div>
-    </footer>
-</div>
 </body>
 
 </html>
