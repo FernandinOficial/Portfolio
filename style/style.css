@@ -97,6 +97,13 @@ a {
 	border: 3px solid #6D6A6A;
 	border-radius: 85px;
 }
+.nav-container img{
+	width: 40px;
+	border-radius: 50px;
+}
+li a {
+	font-family: "Mavem Pro", sans-serif;
+}
 
 #bolinha {
 	position: absolute;
@@ -105,8 +112,8 @@ a {
 	height: 20px;
 	border-radius: 100%;
 	margin-top: 30px;
-	margin-right: 205px;
-	border: 5px solid #4E4E4E;
+	margin-right: 210px;
+	border: 4px solid #4E4E4E;
 }
 
 #welcome {
@@ -160,8 +167,11 @@ a {
 	padding-top: 40px;
 	z-index: 1;
 }
+.plataformas-container img{
+	width: 310px;
+}
 
-.sombra-plataforma {
+.sombra-plataformas {
 	width: 320px;
 	height: 320px;
 	border-radius: 100%;
@@ -171,4 +181,46 @@ a {
 	background: rgb(130, 121, 121);
 	background: radial-gradient(circle, rgba(130, 121, 121, 1) 0%, rgba(46, 44, 44, 1) 70%);
 	z-index: -1;
+}
+.button-plataformas{
+	margin-left: auto;
+	margin-right: auto;
+}
+.button-plataformas button {
+	position: relative;
+	margin-top: -50px;
+	width: 108px;
+	height: 50px;
+	font-weight: bold;
+	border: 0;
+	border-radius: 15px;
+	background-color: #1C7F0C;
+	color: #FFFFFF;
+	box-shadow: 2px 3px #000000;
+}
+
+.button-plataformas button:hover {
+	transition: ease-in-out 200ms;
+	border: 0;
+	border-radius: 15px;
+	box-shadow: 2px 3px #000000;
+	color: #272323;
+	background-color: #C58F05;
+}
+
+.button-plataformas button:active {
+	transition: ease-in-out 200ms;
+	border: 0;
+	border-radius: 15px;
+	box-shadow: -2px -3px rgba(0, 0, 0, 0.6);
+	color: #C0BDBD;
+	background-color: #77580A;
+}
+
+
+#competencias{
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	padding-top: 55px;
 }
