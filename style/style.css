@@ -162,11 +162,13 @@ a {
 }
 
 .sombra-plataforma {
-	width: 310px;
-	height: 310px;
+	width: 320px;
+	height: 320px;
 	border-radius: 100%;
-	margin-top: -260px;
+	margin-top: -280px;
 	margin-left: auto;
 	margin-right: auto;
+	background: rgb(130, 121, 121);
+	background: radial-gradient(circle, rgba(130, 121, 121, 1) 0%, rgba(46, 44, 44, 1) 70%);
 	z-index: -1;
 }
