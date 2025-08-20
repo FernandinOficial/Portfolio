@@ -7,9 +7,10 @@
     <title>Portfólio</title>
     <!--Estilo CSS-->
     <link rel="stylesheet" href="style/style.css">
-    <link rel="shortcut icon" href="imagens/logoSemfundo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="shortcut icon" href="img/logoSemfundo.png" type="image/x-icon">
     <!--JavaScript-->
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Miriam+Libre:wght@400;700&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&family=Miriam+Libre:wght@400;700&display=swap');
@@ -17,39 +18,146 @@
 </head>
 
 <body>
-    <nav>
-        <div class="nav-container">
-            <img src="img/perfil/iconPerfil.png" alt="Icone Perfil">
-            <div id="bolinha"></div>
-            <ul>
-                <li><a href="">Projetos</a></li>
-                <li><a href="">Conhecimento</a></li>
-            </ul>
-        </div>
-    </nav>
-    <main>
-        <div id="welcome">
-            <h1>Hello, People!</h1>
-            <p>Seja muito Bem-Vindo(a) ao meu Portfólio</p>
-            <div class="button-welcome">
-                <button id="contato-welcome">CONTATO</button>
-                <button id="mais-welcome">MAIS...</button>
+    <div id="loader" aria-hidden="true"></div>
+    <div id="content">
+        <div class="bg-aurora" aria-hidden="true"></div>
+        <nav>
+            <div class="nav-container">
+                <div class="brand">
+                    <img src="img/perfil/iconPerfil.png" alt="Icone Perfil">
+                    <span>Fernando Ribeiro</span>
+                </div>
+                <ul>
+                    <li><a href="#projetos">Projetos</a></li>
+                    <li><a href="#competencias">Conhecimento</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+                <label class="switch" title="Alternar tema">
+                    <input id="theme-checkbox" type="checkbox" aria-label="Alternar tema claro/escuro">
+                    <span class="slider"></span>
+                </label>
             </div>
-        </div>
-        <div id="plataformas">
-            <h2>Acesso para multiplataformas</h2>
-            <div class="plataformas-container">
-                <img class="plataformas" src="img/plataformas.png" alt="Multiplataformas">
-                <div class="sombra-plataformas"></div>
-            </div>
-            <div class="button-plataformas">
-                <a href="https://www.linkedin.com/in/fernando-ribeiro-070507277/" target="_blank"><button>CONECTE-SE</button></a>
-            </div>
-        </div>
-        <div id="competencias">
-            <h2>Minhas Competências</h2>
-        </div>
-    </main>
+        </nav>
+        <main>
+            <section id="welcome" class="section">
+                <h1 class="title-gradient">Hello, People!</h1>
+                <p>Seja muito Bem-Vindo(a) ao meu Portfólio</p>
+                <div class="button-welcome">
+                    <a class="btn primary" href="https://www.linkedin.com/in/fernando-ribeiro-070507277/" target="_blank" rel="noopener">Conectar</a>
+                    <a class="btn ghost" href="#competencias">Mais...</a>
+                </div>
+                <ul class="social">
+                    <li><a href="https://www.linkedin.com/in/fernando-ribeiro-070507277/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                    <li><a href="https://github.com/" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a></li>
+                    <li><a href="projetos.html"><i class="fa-solid fa-folder-open"></i> Projetos</a></li>
+                </ul>
+            </section>
+            <section id="projetos" class="section">
+                <h2>Projetos em Destaque</h2>
+                <div class="projects-grid">
+                    <article class="project-card neon">
+                        <img src="img/bgProgramaçao.png" alt="Projeto 1">
+                        <div class="project-info">
+                            <h3>UI Responsiva</h3>
+                            <p>Layout moderno com animações e acessibilidade.</p>
+                        </div>
+                    </article>
+                    <article class="project-card neon">
+                        <img src="img/bgHardware.png" alt="Projeto 2">
+                        <div class="project-info">
+                            <h3>Dashboard</h3>
+                            <p>Gráficos dinâmicos e API integrada.</p>
+                        </div>
+                    </article>
+                    <article class="project-card neon">
+                        <img src="img/bgRedes.png" alt="Projeto 3">
+                        <div class="project-info">
+                            <h3>Landing Page</h3>
+                            <p>Alta performance e SEO.</p>
+                        </div>
+                    </article>
+                </div>
+                <div class="cta-center">
+                    <a class="btn primary" href="projetos.html">Ver todos os projetos</a>
+                </div>
+            </section>
+            <section id="plataformas" class="section">
+                <h2>Acesso para multiplataformas</h2>
+                <div class="plataformas-container">
+                    <img class="plataformas" src="img/plataformas.png" alt="Multiplataformas">
+                    <div class="sombra-plataformas"></div>
+                </div>
+                <div class="button-plataformas">
+                    <a class="btn primary" href="https://www.linkedin.com/in/fernando-ribeiro-070507277/" target="_blank">Conecte-se</a>
+                </div>
+            </section>
+            <section id="competencias" class="section">
+                <h2>Minhas Competências</h2>
+                <div class="cards-grid">
+                    <article class="card neon">
+                        <h3>Desenvolvedor Front‑End</h3>
+                        <ul>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                        </ul>
+                        <p>Interface moderna, acessível e responsiva.</p>
+                    </article>
+                    <article class="card neon">
+                        <h3>Desenvolvedor Back‑End</h3>
+                        <ul>
+                            <li>PHP</li>
+                            <li>SQL</li>
+                            <li>C#</li>
+                        </ul>
+                        <p>APIs seguras e performáticas.</p>
+                    </article>
+                    <article class="card neon">
+                        <h3>UI Design</h3>
+                        <ul>
+                            <li>Figma</li>
+                            <li>CorelDRAW</li>
+                            <li>Aseprite</li>
+                        </ul>
+                        <p>Experiências limpas com foco no usuário.</p>
+                    </article>
+                    <article class="card neon">
+                        <h3>Redes de Computadores</h3>
+                        <ul>
+                            <li>Cabeamento Estruturado</li>
+                            <li>Equipamentos de Rede</li>
+                            <li>Servidores</li>
+                        </ul>
+                        <p>Implantação, gestão e monitoramento.</p>
+                    </article>
+                </div>
+            </section>
+            <section id="sobre" class="section about">
+                <div class="about-media">
+                    <img src="img/fotoPerfil1.png" alt="Foto de perfil">
+                </div>
+                <div class="about-bio">
+                    <h2>Sobre mim</h2>
+                    <p>Sou desenvolvedor focado em criar interfaces elegantes, acessíveis e performáticas. Adoro transformar ideias em experiências digitais com visual caprichado e código limpo.</p>
+                </div>
+            </section>
+            <section id="contato" class="section contact">
+                <h2>Contato</h2>
+                <form class="contact-form" method="post" action="mailto:seuemail@exemplo.com" enctype="text/plain">
+                    <div class="grid-2">
+                        <input type="text" name="nome" placeholder="Seu nome" required>
+                        <input type="email" name="email" placeholder="Seu e-mail" required>
+                    </div>
+                    <textarea name="mensagem" rows="5" placeholder="Sua mensagem"></textarea>
+                    <button class="btn primary" type="submit">Enviar</button>
+                </form>
+            </section>
+        </main>
+        <footer class="footer section">
+            <p>© <span id="year"></span> Fernando Ribeiro. Feito com ♥ e café.</p>
+        </footer>
+    </div>
 </body>
 
 </html>

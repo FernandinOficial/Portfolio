@@ -12,9 +12,9 @@ window.addEventListener("load", function() {
   }
 
   setTimeout(function() {
-    loader.style.display = "none"; // Esconde o loader
-    content.style.display = "block"; // Exibe o conteúdo
-  }, 4000); // Tempo de espera em milissegundos (4 segundos neste exemplo)
+    loader.style.display = "none";
+    content.style.display = "block";
+  }, 1200);
 });
 
 
@@ -30,18 +30,38 @@ function changeTitle(title) {
   
   // Adiciona um ouvinte para o evento "blur" na janela
   window.addEventListener('blur', function() {
-    changeTitle('Volte aqui  ;('); // Altera o título quando a janela perde o foco
+    changeTitle('Volte aqui  ;(');
   });
   
   // Adiciona um ouvinte para o evento "focus" na janela
   window.addEventListener('focus', function() {
-    changeTitle(originalTitle); // Restaura o título original quando a janela recupera o foco
+    changeTitle(originalTitle);
   });
   
   // Adiciona um ouvinte para o evento "beforeunload" na janela
   window.addEventListener('beforeunload', function() {
-    changeTitle('| Carregando |'); // Altera o título antes de sair
+    changeTitle('| Carregando |');
     return null;
   });
   
 // Função de sair da página e falar para voltar // 
+
+// Tema claro/escuro usando o switch (checkbox)
+const themeCheckbox = document.getElementById('theme-checkbox');
+if (themeCheckbox) {
+  const root = document.documentElement;
+  const stored = localStorage.getItem('theme');
+  if (stored === 'light') {
+    root.classList.add('light');
+    themeCheckbox.checked = true;
+  }
+  themeCheckbox.addEventListener('change', (e) => {
+    const isLight = e.target.checked;
+    root.classList.toggle('light', isLight);
+    localStorage.setItem('theme', isLight ? 'light' : 'dark');
+  });
+}
+
+// ano do rodapé
+const year = document.getElementById('year');
+if (year) year.textContent = new Date().getFullYear();
